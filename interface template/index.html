@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row header-block">
+            <div class="col-12">
+                <h1>Chess online (доделать хинты)</h1>
+            </div>
+        </div>
+        <div class="row center-block">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-12 center-content">
+                <h1>Добро пожаловать!</h1><br>
+
+                <button type="button" class="btn btn-outline-primary full-width-button" data-toggle="modal" data-target="#login">Войти</button><br>
+                <span class="badge badge-dark">или</span><br>
+                <button type="button" class="btn btn-primary full-width-button" data-toggle="modal" data-target="#signUp">Зарегистрироваться</button><br>
+            </div>
+
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <!--modal window-->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginView" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginView">Вход</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginInput">Имя пользователя</label>
+                            <input type="email" class="form-control" id="loginInput" placeholder="Введите имя пользователя">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordInput">Пароль</label>
+                            <input type="password" class="form-control" id="passwordInput" placeholder="Введите пароль">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                        <button type="button" class="btn btn-primary">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpView" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpView">Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="newLoginInput">Имя пользователя <span class="red-text">*</span></label>
+                            <input type="email" class="form-control" id="newLoginInput" placeholder="Введите логин">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Пароль <span class="red-text">*</span></label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="Введите пароль"><br>
+                            <input type="password" class="form-control" id="confurmPassword" placeholder="Подтвердите пароль">
+                        </div>
+                        <small id="hint" class="form-text text-muted">Поля, помеченные символом "
+                            <span class="red-text">*</span> " обязательны для заполнения.</small><br>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                        <button type="button" class="btn btn-success">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--add js-->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
